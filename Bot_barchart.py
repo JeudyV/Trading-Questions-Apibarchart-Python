@@ -210,7 +210,7 @@ def _test_(chat_id, update_id):
     #-------------------------------------------
         
 def menu(chat_id, text, update_id):
-    commands = ['P1', 'P2', 'P3']
+    commands = ["Money Strike Price", "What Is The Iv", "What Is The Strike Price"]
     welcome_note(chat_id, commands)
 
     while text.lower() == 'start':
@@ -223,11 +223,11 @@ def menu(chat_id, text, update_id):
         chat_id, text, update_id = get_last_id_text(get_updates(update_id))
         print("waiting 2")
 
-    if text == 'P1':
+    if text == "Money Strike Price":
         test(chat_id, update_id)
-    elif text == 'P2':
+    elif text == "What Is The Iv":
         test_(chat_id, update_id)
-    elif text == 'P3':
+    elif text == "What Is The Strike Price":
         _test_(chat_id, update_id)
         
     text = 'start' 
